@@ -5,7 +5,8 @@ ruby '1.9.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
-# Use sqlite3 as the database for Active Record
+gem 'pg', '0.15.1'
+
 # gem included only in a development environment 
 # Use SCSS for stylesheets
 # Use Uglifier as compressor for JavaScript assets
@@ -15,8 +16,9 @@ gem 'rails', '4.0.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 
 group :development, :test do
-  gem 'sqlite3', '1.3.7'
   gem 'rspec-rails', '2.13.1'
+  gem 'spork-rails', github: 'sporkrb/spork-rails'
+  gem 'childprocess', '0.3.9'
 end
 
 # We include the Capybara gem, which allows us to simulate a user’s interaction with the sample application using a natural English-like syntax, together with Selenium, one of Capybara’s dependencies.
@@ -37,7 +39,6 @@ group :doc do
 end
 
 group :production do
-  gem 'pg', '0.15.1'
   gem 'rails_12factor', '0.0.2'
 end
 

@@ -8,10 +8,18 @@
 	"buffers":
 	[
 		{
-			"file": "config/routes.rb",
+			"file": "app/views/layouts/application.html.erb",
 			"settings":
 			{
-				"buffer_size": 1690,
+				"buffer_size": 322,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/helpers/application_helper.rb",
+			"settings":
+			{
+				"buffer_size": 262,
 				"line_ending": "Unix"
 			}
 		},
@@ -19,15 +27,7 @@
 			"file": "spec/requests/static_pages_spec.rb",
 			"settings":
 			{
-				"buffer_size": 558,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/static_pages/home.html.erb",
-			"settings":
-			{
-				"buffer_size": 147,
+				"buffer_size": 1499,
 				"line_ending": "Unix"
 			}
 		}
@@ -56,18 +56,32 @@
 	},
 	"file_history":
 	[
-		"/C/desarrollo/ruby/proyectos/sample_app/app/views/layouts/application.html.erb",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/views/static_pages/about.html.erb",
 		"/C/desarrollo/ruby/proyectos/sample_app/app/controllers/static_pages_controller.rb",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/views/static_pages/help.html.erb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/controllers/application_controller.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/helpers/static_pages_helper.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/views/static_pages/about.html.erb",
 		"/C/desarrollo/ruby/proyectos/sample_app/app/views/static_pages/home.html.erb",
-		"/C/desarrollo/ruby/proyectos/sample_app/spec/spec_helper.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/views/static_pages/help.html.erb",
 		"/C/desarrollo/ruby/proyectos/sample_app/spec/requests/static_pages_spec.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/Gemfile",
+		"/C/desarrollo/ruby/proyectos/sample_app/spec/spec_helper.rb",
 		"/C/desarrollo/ruby/proyectos/sample_app/config/database.yml",
+		"/C/desarrollo/ruby/proyectos/sample_app/Guardfile",
+		"/C/desarrollo/ruby/proyectos/sample_app/.rspec",
+		"/C/desarrollo/ruby/proyectos/sample_app/Gemfile.lock",
+		"/C/desarrollo/ruby/proyectos/sample_app/config/routes.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/config/database_OLD",
+		"/C/desarrollo/ruby/proyectos/sample_app/config/OLD_database",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/views/static_pages/contact.html.erb",
 		"/C/desarrollo/ruby/proyectos/sample_app/.gitignore",
+		"/C/Users/Laura/AppData/Roaming/Sublime Text 2/Packages/User/RubyTest.sublime-settings",
+		"/C/Users/Laura/AppData/Roaming/Sublime Text 2/Packages/RubyTest/RubyTest.sublime-settings",
+		"/C/Users/Laura/AppData/Roaming/Sublime Text 2/Packages/RubyTest/Default.sublime-keymap",
+		"/C/Users/Laura/AppData/Roaming/Sublime Text 2/Packages/RubyTest/Default (Windows).sublime-keymap",
+		"/C/desarrollo/ruby/proyectos/sample_app/Rakefile",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/views/layouts/application.html.erb",
 		"/C/desarrollo/ruby/proyectos/sample_app/sample-app.sublime-project",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/controllers/concerns/.keep",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/controllers/application_controller.rb"
+		"/C/desarrollo/ruby/proyectos/sample_app/app/controllers/concerns/.keep"
 	],
 	"find":
 	{
@@ -85,6 +99,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"provi",
+			"format",
+			"require",
+			"require ",
+			"spor",
+			"database.yml",
+			"sqlite3 ",
+			"Contact",
 			"controll"
 		],
 		"highlight": true,
@@ -103,30 +125,28 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "config/routes.rb",
+					"file": "app/views/layouts/application.html.erb",
 					"settings":
 					{
-						"buffer_size": 1690,
+						"buffer_size": 322,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								119,
-								119
+								71,
+								71
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -136,18 +156,18 @@
 				},
 				{
 					"buffer": 1,
-					"file": "spec/requests/static_pages_spec.rb",
+					"file": "app/helpers/application_helper.rb",
 					"settings":
 					{
-						"buffer_size": 558,
+						"buffer_size": 262,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								558,
-								558
+								163,
+								173
 							]
 						],
 						"settings":
@@ -162,23 +182,25 @@
 				},
 				{
 					"buffer": 2,
-					"file": "app/views/static_pages/home.html.erb",
+					"file": "spec/requests/static_pages_spec.rb",
 					"settings":
 					{
-						"buffer_size": 147,
+						"buffer_size": 1499,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								147,
-								147
+								58,
+								68
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -195,7 +217,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 31.0
 	},
 	"layout":
 	{
@@ -222,7 +244,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 100.0
+		"height": 129.0
 	},
 	"replace":
 	{
@@ -234,6 +256,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"da",
+				"config/database.yml"
+			]
 		],
 		"width": 0.0
 	},
