@@ -6,6 +6,7 @@ ruby '1.9.3'
 gem 'rails', '4.0.0'
 
 gem 'pg', '0.15.1'
+gem 'bootstrap-sass', '2.3.2.0'
 
 # gem included only in a development environment 
 # Use SCSS for stylesheets
