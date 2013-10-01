@@ -3,24 +3,28 @@
 	{
 		"selected_items":
 		[
+			[
+				"h",
+				"have_title"
+			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "spec/requests/static_pages_spec.rb",
+			"file": "spec/models/user_spec.rb",
 			"settings":
 			{
-				"buffer_size": 1121,
+				"buffer_size": 3809,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "spec/support/utilities.rb",
+			"file": "app/models/user.rb",
 			"settings":
 			{
-				"buffer_size": 163,
-				"line_ending": "Windows"
+				"buffer_size": 332,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -48,33 +52,45 @@
 	},
 	"file_history":
 	[
+		"/C/desarrollo/ruby/proyectos/sample_app/app/models/user.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/db/migrate/20131001103609_add_password_digest_to_users.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/db/migrate/20130930102209_add_index_to_users_email.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/db/migrate/20130924095945_create_users.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/db/seeds.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/db/schema.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/Gemfile",
+		"/C/desarrollo/ruby/proyectos/sample_app/spec/requests/static_pages_spec.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/spec/requests/user_pages_spec.rb",
 		"/C/desarrollo/ruby/proyectos/sample_app/config/routes.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/config/database.yml",
+		"/C/desarrollo/ruby/proyectos/sample_app/spec/spec_helper.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/config/database_OLD",
+		"/C/desarrollo/ruby/proyectos/sample_app/config.ru",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/controllers/users_controller.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/views/layouts/_header.html.erb",
+		"/C/desarrollo/ruby/proyectos/sample_app/spec/support/utilities.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/helpers/application_helper.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/spec/helpers/application_helper_spec.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/views/static_pages/contact.html.erb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/views/layouts/_footer.html.erb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/views/static_pages/home.html.erb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/views/users/new.html.erb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/controllers/application_controller.rb",
 		"/C/desarrollo/ruby/proyectos/sample_app/app/views/layouts/application.html.erb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/controllers/static_pages_controller.rb",
 		"/C/desarrollo/ruby/proyectos/sample_app/app/views/static_pages/help.html.erb",
 		"/C/desarrollo/ruby/proyectos/sample_app/app/helpers/static_pages_helper.rb",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/helpers/application_helper.rb",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/controllers/static_pages_controller.rb",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/views/layouts/_header.html.erb",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/views/layouts/_footer.html.erb",
 		"/C/desarrollo/ruby/proyectos/sample_app/app/views/static_pages/about.html.erb",
 		"/C/desarrollo/ruby/proyectos/sample_app/app/assets/stylesheets/custom.css.scss",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/views/static_pages/contact.html.erb",
-		"/C/desarrollo/ruby/proyectos/sample_app/spec/requests/static_pages_spec.rb",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/views/static_pages/home.html.erb",
 		"/C/desarrollo/ruby/proyectos/sample_app/app/assets/javascripts/application.js",
-		"/C/desarrollo/ruby/proyectos/sample_app/Gemfile",
 		"/C/desarrollo/ruby/proyectos/sample_app/app/views/layouts/_shim.html.erb",
 		"/C/desarrollo/ruby/proyectos/sample_app/app/assets/stylesheets/application.css",
 		"/C/desarrollo/ruby/proyectos/sample_app/config/application.rb",
 		"/C/Users/Laura/Desktop/rails.png",
-		"/C/desarrollo/ruby/proyectos/sample_app/spec/spec_helper.rb",
 		"/C/desarrollo/ruby/proyectos/sample_app/SOBRA_example_user.rb",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/controllers/application_controller.rb",
-		"/C/desarrollo/ruby/proyectos/sample_app/config/database.yml",
 		"/C/desarrollo/ruby/proyectos/sample_app/Guardfile",
 		"/C/desarrollo/ruby/proyectos/sample_app/.rspec",
 		"/C/desarrollo/ruby/proyectos/sample_app/Gemfile.lock",
-		"/C/desarrollo/ruby/proyectos/sample_app/config/database_OLD",
 		"/C/desarrollo/ruby/proyectos/sample_app/config/OLD_database",
 		"/C/desarrollo/ruby/proyectos/sample_app/.gitignore",
 		"/C/Users/Laura/AppData/Roaming/Sublime Text 2/Packages/User/RubyTest.sublime-settings",
@@ -103,6 +119,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"signup_path",
+			"  \n",
 			"root",
 			"about_path",
 			"eaeaea",
@@ -141,46 +159,45 @@
 			[
 				{
 					"buffer": 0,
-					"file": "spec/requests/static_pages_spec.rb",
+					"file": "spec/models/user_spec.rb",
 					"settings":
 					{
-						"buffer_size": 1121,
+						"buffer_size": 3809,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								657,
-								657
+								1158,
+								1158
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 90.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "spec/support/utilities.rb",
+					"file": "app/models/user.rb",
 					"settings":
 					{
-						"buffer_size": 163,
+						"buffer_size": 332,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								163,
-								163
+								308,
+								308
 							]
 						],
 						"settings":
@@ -229,7 +246,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 100.0
+		"height": 189.0
 	},
 	"replace":
 	{
@@ -256,10 +273,10 @@
 		],
 		"width": 380.0
 	},
-	"show_minimap": true,
+	"show_minimap": false,
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 201.0,
+	"side_bar_width": 168.0,
 	"status_bar_visible": true
 }
