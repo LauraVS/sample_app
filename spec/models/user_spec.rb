@@ -1,5 +1,7 @@
 require 'spec_helper'
 
+# Test de validaciones de los campos de User
+
 describe User do
 
 	# antes de cada caso (it) se tiene que hacer esto:
@@ -51,7 +53,6 @@ describe User do
 		before { @user.name = "a" * 51 }
 		it { should_not be_valid }
 	end
-
 
 	# Valida que falle con varios emails con formato incorrecto
 	describe "when email format is invalid" do
