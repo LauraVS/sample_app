@@ -58,6 +58,7 @@ describe "User pages" do
 				before { click_button buttonText }
 				let(:user) { User.find_by(email: 'user@example.com') }
 
+				it { should have_link('Sign out') } # este submenú sólo se muestra si hay sesión iniciada
 				it { should have_title(user.name) }
 				it { should have_selector('div.alert.alert-success', text: 'Welcome') } # have_selector to pick out particular CSS classes along with specific HTML tags.
 			end			

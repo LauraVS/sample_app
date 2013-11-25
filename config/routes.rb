@@ -9,6 +9,11 @@ SampleApp::Application.routes.draw do
   resources :users
   match '/signup', to: 'users#new', via: 'get' # Esto redirecciona al "users/new"
 
+  # Sessions
+  resources :sessions, only: [:new, :create, :destroy]
+  match '/signin', to: 'sessions#new', via: 'get' # Esto redirecciona al "sessions/new"
+  match '/signout', to: 'sessions#destroy', via: 'delete' # Esto redirecciona al "sessions/destroy"
+
 
   # OLD -----------------------
   # get "static_pages/home"

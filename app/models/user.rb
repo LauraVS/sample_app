@@ -6,4 +6,35 @@ class User < ActiveRecord::Base
 
 	has_secure_password
 	validates :password, length: { minimum: 6 }
+
+	# create a remember token immediately before creating a new user in the database
+	before_create :create_remember_token
+	# This code, called a method reference, arranges for Rails to look for a method 
+	# called create_remember_token and run it before saving the user. 
+
+
+
+
+	# Public method
+	# It returns a random string of length 16 in Base64 encoding 
+	def User.new_remember_token
+		SecureRandom.urlsafe_base64
+	end
+
+	# Public method
+	def User.encrypt(token)
+		Digest::SHA1.hexdigest(token.to_s)
+	end
+
+
+
+	# ---
+	# All methods defined after private are automatically hidden to external users via the web.
+	# They will only be used internally by the Users model.
+	private
+
+	    def create_remember_token
+	      # Con "self" accedemos a la vble "remember_token" del modelo, la de BD
+	      self.remember_token = User.encrypt(User.new_remember_token)
+	    end    	
 end
