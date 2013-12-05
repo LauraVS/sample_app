@@ -35,9 +35,34 @@ module SessionsHelper
   end
 
 
+  def current_user?(user)
+    user == current_user
+  end
+
+
   def sign_out
     self.current_user = nil  # Eq: self.current_user=(nil)
     cookies.delete(:remember_token)
-  end  
+  end 
+
+
+  def redirect_back_or(default)
+
+    if session[:return_to] != nil
+      logger.info "\n\n******** Redirecciona a la url en session: " + session[:return_to]
+    else
+      logger.info "\n\n******** Redirecciona a: " +default
+    end
+
+    # Redirect to the stored location
+    redirect_to(session[:return_to] || default)  # si es nula la url en sesión, va a por defecto
+    session.delete(:return_to)
+  end
+
+
+  def store_location
+    # Store the request url in session, only for GET request
+    session[:return_to] = request.url if request.get?
+  end
 
 end

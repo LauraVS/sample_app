@@ -36,6 +36,15 @@ describe User do
 	#  expect(@user).to be_valid
 	#end	
 
+	it { should_not be_admin }
+
+	describe "with admin attribute set to 'true'" do
+		before do
+			@user.save!
+			@user.toggle!(:admin) # changes the admin attribute from false to true
+		end
+		it { should be_admin } # implies (via the RSpec boolean convention) that the user should have an admin? boolean method
+	end	
 
 	# Valida presencia del campo nombre
 	describe "when name is not present" do

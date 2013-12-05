@@ -12,42 +12,42 @@
 	"buffers":
 	[
 		{
-			"file": "config/routes.rb",
+			"file": "app/controllers/users_controller.rb",
 			"settings":
 			{
-				"buffer_size": 2385,
+				"buffer_size": 3588,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/controllers/sessions_controller.rb",
+			"file": "app/views/users/index.html.erb",
 			"settings":
 			{
-				"buffer_size": 632,
+				"buffer_size": 358,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "spec/requests/user_pages_spec.rb",
+			"settings":
+			{
+				"buffer_size": 6130,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/helpers/sessions_helper.rb",
+			"file": "app/views/users/_user.html.erb",
 			"settings":
 			{
-				"buffer_size": 1206,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/models/user.rb",
-			"settings":
-			{
-				"buffer_size": 1241,
-				"line_ending": "Unix"
+				"buffer_size": 341,
+				"line_ending": "Windows"
 			}
 		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 81.0,
 		"selected_items":
 		[
 			[
@@ -59,7 +59,7 @@
 	},
 	"console":
 	{
-		"height": 125.0
+		"height": 188.0
 	},
 	"distraction_free":
 	{
@@ -72,52 +72,77 @@
 	},
 	"file_history":
 	[
-		"/C/Users/Laura/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/views/layouts/_header.html.erb",
-		"/C/Users/Laura/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
-		"/C/desarrollo/ruby/proyectos/sample_app/spec/requests/authentication_pages_spec.rb",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/controllers/users_controller.rb",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/views/sessions/new.html.erb",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/helpers/sessions_helper.rb",
-		"/C/desarrollo/ruby/proyectos/sample_app/spec/requests/user_pages_spec.rb",
-		"/C/desarrollo/ruby/proyectos/sample_app/spec/factories.rb",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/views/layouts/application.html.erb",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/views/shared/_error_messages.html.erb",
+		"/C/desarrollo/ruby/proyectos/sample_app/lib/tasks/sample_data.rake",
 		"/C/desarrollo/ruby/proyectos/sample_app/spec/models/user_spec.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/spec/factories.rb",
+		"/C/Users/Laura/AppData/Roaming/Sublime Text 2/Packages/RubyTest/RubyTest.sublime-settings",
+		"/C/Users/Laura/AppData/Roaming/Sublime Text 2/Packages/User/go2function.sublime-settings",
+		"/C/desarrollo/ruby/proyectos/sample_app/spec/requests/user_pages_spec.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/spec/requests/static_pages_spec.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/spec/requests/authentication_pages_spec.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/spec/support/utilities.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/models/user.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/db/migrate/20131204110705_add_admin_to_users.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/views/users/_user.html.erb",
+		"/C/desarrollo/ruby/proyectos/sample_app/config/routes.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/Gemfile",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/helpers/users_helper.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/log/development.log",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/helpers/sessions_helper.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/views/users/index.html.erb",
+		"/C/desarrollo/ruby/proyectos/sample_app/log.txt",
+		"/C/desarrollo/ruby/proyectos/sample_app/config/environments/development.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/config/environment.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/log/.keep",
+		"/C/desarrollo/ruby/proyectos/sample_app/log/test.log",
+		"/C/desarrollo/ruby/proyectos/sample_app/log/production.log",
+		"/C/desarrollo/ruby/proyectos/sample_app/db/schema.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/config/environments/production.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/config/environments/test.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/controllers/sessions_controller.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/assets/stylesheets/custom.css.scss",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/views/users/show.html.erb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/views/users/edit.html.erb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/views/users/new.html.erb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/views/layouts/application.html.erb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/views/layouts/_header.html.erb",
+		"/C/desarrollo/ruby/proyectos/sample_app/spec/spec_helper.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/assets/stylesheets/users.css.scss",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/assets/stylesheets/application.css",
+		"/C/Users/Laura/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Laura/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Laura/AppData/Roaming/Sublime Text 2/Packages/User/JSON.sublime-settings",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/views/shared/_error_messages.html.erb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/controllers/application_controller.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/controllers/static_pages_controller.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/views/sessions/new.html.erb",
+		"/C/Users/Laura/AppData/Roaming/Sublime Text 2/Packages/SublimeLinter/Default (Windows).sublime-keymap",
+		"/C/Users/Laura/AppData/Roaming/Sublime Text 2/Packages/User/SublimeLinter.sublime-settings",
+		"/C/Users/Laura/AppData/Roaming/Sublime Text 2/Packages/SublimeLinter/README.md",
+		"/C/Users/Laura/AppData/Roaming/Sublime Text 2/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/C/Users/Laura/AppData/Roaming/Sublime Text 2/Packages/User/SublimeCodeIntel.sublime-settings",
+		"/C/Users/Laura/AppData/Roaming/Sublime Text 2/Packages/SublimeCodeIntel/SublimeCodeIntel.sublime-settings",
+		"/C/Users/Laura/AppData/Roaming/Sublime Text 2/Packages/User/RubyTest.sublime-settings",
+		"/C/Users/Laura/AppData/Roaming/Sublime Text 2/Packages/User/Package Control.sublime-settings",
+		"/C/Users/Laura/AppData/Roaming/Sublime Text 2/Packages/Package Control/Package Control.sublime-settings",
+		"/C/Users/Laura/AppData/Roaming/Sublime Text 2/Packages/User/Markdown.sublime-settings",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/controllers/users_controller.rb",
 		"/C/desarrollo/ruby/proyectos/sample_app/app/assets/javascripts/application.js",
 		"/C/desarrollo/ruby/proyectos/sample_app/app/helpers/application_helper.rb",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/views/users/show.html.erb",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/helpers/users_helper.rb",
 		"/C/desarrollo/ruby/proyectos/sample_app/app/helpers/static_pages_helper.rb",
 		"/C/desarrollo/ruby/proyectos/sample_app/db/migrate/20131119164242_add_remember_token_to_users.rb",
 		"/C/desarrollo/ruby/proyectos/sample_app/db/migrate/20131001103609_add_password_digest_to_users.rb",
 		"/C/desarrollo/ruby/proyectos/sample_app/db/migrate/20130930102209_add_index_to_users_email.rb",
 		"/C/desarrollo/ruby/proyectos/sample_app/db/migrate/20130924095945_create_users.rb",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/controllers/application_controller.rb",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/models/user.rb",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/views/users/new.html.erb",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/assets/stylesheets/users.css.scss",
 		"/C/desarrollo/ruby/proyectos/sample_app/app/assets/javascripts/users.js.coffee",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/controllers/sessions_controller.rb",
-		"/C/desarrollo/ruby/proyectos/sample_app/spec/spec_helper.rb",
-		"/C/desarrollo/ruby/proyectos/sample_app/config/environments/production.rb",
-		"/C/desarrollo/ruby/proyectos/sample_app/Gemfile",
 		"/C/desarrollo/ruby/proyectos/sample_app/Gemfile.lock",
 		"/C/Users/Laura/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/assets/stylesheets/custom.css.scss",
 		"/C/desarrollo/ruby/proyectos/sample_app/config/database.yml",
 		"/C/desarrollo/ruby/proyectos/sample_app/db/development.sqlite3",
-		"/C/desarrollo/ruby/proyectos/sample_app/db/schema.rb",
-		"/C/desarrollo/ruby/proyectos/sample_app/spec/requests/static_pages_spec.rb",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/assets/stylesheets/application.css",
 		"/C/desarrollo/ruby/proyectos/sample_app/app/views/static_pages/help.html.erb",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/controllers/static_pages_controller.rb",
-		"/C/desarrollo/ruby/proyectos/sample_app/config/environments/test.rb",
 		"/C/desarrollo/ruby/proyectos/sample_app/db/seeds.rb",
-		"/C/desarrollo/ruby/proyectos/sample_app/config/routes.rb",
 		"/C/desarrollo/ruby/proyectos/sample_app/config/database_OLD",
 		"/C/desarrollo/ruby/proyectos/sample_app/config.ru",
-		"/C/desarrollo/ruby/proyectos/sample_app/spec/support/utilities.rb",
 		"/C/desarrollo/ruby/proyectos/sample_app/spec/helpers/application_helper_spec.rb",
 		"/C/desarrollo/ruby/proyectos/sample_app/app/views/static_pages/contact.html.erb",
 		"/C/desarrollo/ruby/proyectos/sample_app/app/views/layouts/_footer.html.erb",
@@ -131,8 +156,6 @@
 		"/C/desarrollo/ruby/proyectos/sample_app/.rspec",
 		"/C/desarrollo/ruby/proyectos/sample_app/config/OLD_database",
 		"/C/desarrollo/ruby/proyectos/sample_app/.gitignore",
-		"/C/Users/Laura/AppData/Roaming/Sublime Text 2/Packages/User/RubyTest.sublime-settings",
-		"/C/Users/Laura/AppData/Roaming/Sublime Text 2/Packages/RubyTest/RubyTest.sublime-settings",
 		"/C/Users/Laura/AppData/Roaming/Sublime Text 2/Packages/RubyTest/Default.sublime-keymap",
 		"/C/Users/Laura/AppData/Roaming/Sublime Text 2/Packages/RubyTest/Default (Windows).sublime-keymap",
 		"/C/desarrollo/ruby/proyectos/sample_app/Rakefile",
@@ -157,6 +180,54 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"pagination",
+			"sublime-find-function-definition-master",
+			"store_location",
+			"togg",
+			"save",
+			"toggle",
+			"select",
+			"fill_in",
+			"click",
+			"visit",
+			"be_empty",
+			"expected",
+			"expec",
+			"match",
+			"require",
+			"match",
+			"should have_",
+			"should",
+			"be_valid",
+			"!",
+			"@user.save",
+			"it { should_not be_admin }",
+			"it { should be_valid }",
+			"ld respond_to(:authentica",
+			"factory",
+			"facto",
+			"og",
+			"redirect_back_or",
+			"store_location",
+			"redirect_to",
+			"current_user",
+			"redirect_back_or",
+			"sign_in",
+			"with valid information",
+			"grayMediumLight",
+			"grayLighter",
+			"gravatar_for",
+			"current",
+			"specify",
+			"css",
+			"current_user",
+			"# Tests for the error messages",
+			"jshint_options",
+			"executable path",
+			"executable pat",
+			"ruby",
+			"sublimelinter_executable_map",
+			"ruby",
 			"curr",
 			"new_remember_token",
 			"root_url",
@@ -223,51 +294,23 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "config/routes.rb",
+					"file": "app/controllers/users_controller.rb",
 					"settings":
 					{
-						"buffer_size": 2385,
+						"buffer_size": 3588,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								421,
-								421
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/controllers/sessions_controller.rb",
-					"settings":
-					{
-						"buffer_size": 632,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								211,
-								211
+								1018,
+								1018
 							]
 						],
 						"settings":
@@ -381,6 +424,136 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
+						"translation.y": 135.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/views/users/index.html.erb",
+					"settings":
+					{
+						"buffer_size": 358,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								76,
+								76
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -388,46 +561,18 @@
 				},
 				{
 					"buffer": 2,
-					"file": "app/helpers/sessions_helper.rb",
+					"file": "spec/requests/user_pages_spec.rb",
 					"settings":
 					{
-						"buffer_size": 1206,
+						"buffer_size": 6130,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								733,
-								733
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 90.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/models/user.rb",
-					"settings":
-					{
-						"buffer_size": 1241,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1222,
-								1222
+								5383,
+								5383
 							]
 						],
 						"settings":
@@ -540,7 +685,137 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 180.0,
+						"translation.y": 2333.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/views/users/_user.html.erb",
+					"settings":
+					{
+						"buffer_size": 341,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								341,
+								341
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -594,6 +869,38 @@
 		"selected_items":
 		[
 			[
+				"_use",
+				"app/views/users/_user.html.erb"
+			],
+			[
+				"facto",
+				"spec/factories.rb"
+			],
+			[
+				"sample_data.rake",
+				"lib/tasks/sample_data.rake"
+			],
+			[
+				"user",
+				"app/models/user.rb"
+			],
+			[
+				"userhtml",
+				"app/views/users/index.html.erb"
+			],
+			[
+				"fact",
+				"spec/factories.rb"
+			],
+			[
+				"log",
+				"log.txt"
+			],
+			[
+				"css",
+				"app/assets/stylesheets/application.css"
+			],
+			[
 				"seshp",
 				"app/helpers/sessions_helper.rb"
 			],
@@ -624,10 +931,6 @@
 			[
 				"header",
 				"app/views/layouts/_header.html.erb"
-			],
-			[
-				"user",
-				"app/models/user.rb"
 			],
 			[
 				"cus",

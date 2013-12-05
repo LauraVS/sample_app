@@ -9,10 +9,14 @@ class SessionsController < ApplicationController
   	user = User.find_by(email: params[:session][:email].downcase)	
 
    	if user && user.authenticate(params[:session][:password]) 
-      # authenticate encripta una password y la compara con la password_digest de BD
-   		# Sign the user in and redirect to the user's show page
+      # "authenticate" encripta una password y la compara con la password_digest de BD
+
       sign_in(user)
-      redirect_to user   # Equivalente a: redirect_to user_path(user)
+
+      # Redirecciona a la url guardada. Si no existe, redirecciona a la página de ver un usuario
+      redirect_back_or(user_path(user))
+      # Ej: redirect_to user --> Equivalente a: redirect_to user_path(user)
+
    	else
    		# Create an error message and re-render the signin form
   		flash.now[:error] = 'Invalid email/password combination'

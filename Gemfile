@@ -8,6 +8,9 @@ gem 'rails', '4.0.0'
 gem 'pg', '0.15.1'
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'bcrypt-ruby', '3.0.1' # to irreversibly encrypt the password
+gem 'faker', '1.1.2' # to allow us to make sample users with semi-realistic names and email addresses
+gem 'will_paginate', '3.0.4' # Pagination
+gem 'bootstrap-will_paginate', '0.0.9' # Bootstrap’s pagination styles
 
 # gem included only in a development environment 
 # Use SCSS for stylesheets
