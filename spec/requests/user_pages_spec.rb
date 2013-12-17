@@ -70,8 +70,10 @@ describe "User pages" do
 	# Test página mostrar datos de un usuario -------------------------------------
 	# -----------------------------------------------------------------------------
 	describe "profile page" do
-		# create a User model object with Factory Girl
-		let(:user) { FactoryGirl.create(:user) }
+	    # Crear un usuario y microposts asociados a él
+	    let(:user) { FactoryGirl.create(:user) }
+	    let!(:m1) { FactoryGirl.create(:micropost, content:"Micropost_1", user: user) }
+		let!(:m2) { FactoryGirl.create(:micropost, content:"Micropost_2", user: user) }
 
 		# antes de cada caso (it) se tiene que visitar user_path(user)
 		before { visit user_path(user) }
@@ -79,7 +81,7 @@ describe "User pages" do
 		it { should have_content(user.name) }
 		it { should have_title(user.name) }
 
-		# --- prueba para mostrar los campos del objeto user creado con FactoryGirl ---
+		# --- PRUEBA para mostrar los campos del objeto user creado con FactoryGirl ---
 		describe "print user data" do
 	      it "should print the name, email, password" do
 	      	puts user.name
@@ -87,6 +89,14 @@ describe "User pages" do
 	      	puts user.password
 	      end
 	    end
+	    # --- FIN PRUEBA ---
+
+		describe "microposts" do
+			it { should have_content(m1.content) }
+			it { should have_content(m2.content) }
+			it { should have_content(user.microposts.count) }
+		end
+
 	end
 
 

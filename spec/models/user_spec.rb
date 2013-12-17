@@ -38,6 +38,10 @@ describe User do
 
 	it { should_not be_admin }
 
+
+	# --------------------------------------------------------
+	# ---- Validaciones en campos ----
+
 	describe "with admin attribute set to 'true'" do
 		before do
 			@user.save!
@@ -145,5 +149,58 @@ describe User do
 		its(:remember_token) { should_not be_blank }
 		# Equivalente: it { expect(@user.remember_token).not_to be_blank }
 	end
+
+
+	it { should respond_to(:admin) }
+
+
+	# --------------------------------------------------------
+	# Test para validar las asociaciones de User con Micropost
+	it { should respond_to(:microposts) }
+	it { should respond_to(:feed) }
+
+	describe "micropost associations" do
+
+		before { @user.save }
+		let!(:older_micropost) { FactoryGirl.create(:micropost, content:"older_micropost", user: @user, created_at: 1.day.ago) }
+		let!(:newer_micropost) { FactoryGirl.create(:micropost, content:"newer_micropost", user: @user, created_at: 1.hour.ago) }
+
+	    it "should have the right microposts in the right order" do
+	      expect(@user.microposts.to_a).to eq [newer_micropost, older_micropost]
+	    end
+
+		# --- PRUEBA para mostrar los Microposts del User ---
+		describe "Test print @user microposts" do
+			let(:a) {@user.microposts.to_a}
+			it "prints user's micoposts data" do
+				# (Criterio de ordenación del array definido en "micropost.rb")
+				puts "\n"
+				puts "First Micropost -> id: " + a[0].id.to_s + ", created_at: " +  a[0].created_at.to_s + ", content: " + a[0].content 
+				puts "Second Micropost -> id: " + a[1].id.to_s + ", created_at: " +  a[1].created_at.to_s + ", content: " + a[1].content 
+			end
+	    end
+	    # --- FIN PRUEBA ---
+
+		it "should destroy associated microposts" do
+			microposts = @user.microposts.to_a
+			@user.destroy
+			expect(microposts).not_to be_empty
+			microposts.each do |micropost|
+				expect(Micropost.where(id: micropost.id)).to be_empty
+			end
+		end
+
+		# Test feeds
+		describe "status" do
+			let(:unfollowed_post) { FactoryGirl.create(:micropost, user: FactoryGirl.create(:user)) }
+
+			# El feed contiene los microposts del usuario, pero excluye los de otros usuarios
+			its(:feed) { should include(newer_micropost) }
+			its(:feed) { should include(older_micropost) }
+			its(:feed) { should_not include(unfollowed_post) }
+		end		
+
+
+	end	
 
 end

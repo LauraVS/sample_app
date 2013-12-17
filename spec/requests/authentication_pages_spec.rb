@@ -116,6 +116,21 @@ describe "Authentication" do
 					it { should have_title('Sign in') } # Como aún no nos hemos validado, vamos al SigIn
 				end
 			end	
+
+			# Las acciones "create" y "destroy" de microposts requieren
+			# que haya usuario validado (en esta prueba no nos hemos validado)
+			describe "in the Microposts controller" do
+
+				describe "submitting to the create action" do
+					before { post microposts_path }
+					specify { expect(response).to redirect_to(signin_path) }
+				end
+
+				describe "submitting to the destroy action" do
+					before { delete micropost_path(FactoryGirl.create(:micropost)) }
+					specify { expect(response).to redirect_to(signin_path) }
+				end
+			end			
 		end
 
 

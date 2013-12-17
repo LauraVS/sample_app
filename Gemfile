@@ -23,7 +23,7 @@ gem 'bootstrap-will_paginate', '0.0.9' # Bootstrap’s pagination styles
 group :development, :test do
   gem 'rspec-rails', '2.13.1'
   gem 'spork-rails', github: 'sporkrb/spork-rails'
-  gem 'childprocess', '0.3.9'
+  # gem 'childprocess', '0.3.9'
 end
 
 # We include the Capybara gem, which allows us to simulate a user’s interaction with the sample application using a natural English-like syntax, together with Selenium, one of Capybara’s dependencies.
@@ -31,6 +31,7 @@ group :test do
   gem 'selenium-webdriver', '2.0.0'
   gem 'capybara', '2.1.0'
   gem 'factory_girl_rails', '4.2.1'
+  gem 'database_cleaner', github: 'bmabey/database_cleaner'
 end
 
 gem 'sass-rails', '4.0.1'

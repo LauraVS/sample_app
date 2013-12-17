@@ -36,6 +36,7 @@ class UsersController < ApplicationController
   # Page to show a user
   def show
     @user = User.find(params[:id])
+    @micropostsList = @user.microposts.paginate(page: params[:page])
   end
 
   # -------------------------------
@@ -109,15 +110,6 @@ class UsersController < ApplicationController
 
 
     # --- Before filters ------------
-
-    def signed_in_user
-      # Si no hay usuario autenticado, guardar la URL en sesión y redireccionar a la pág. de login
-      unless signed_in?
-        store_location
-        redirect_to signin_url, notice: "Please sign in."
-      end
-    end
-
 
     def correct_user
       @user = User.find(params[:id])

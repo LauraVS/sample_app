@@ -14,6 +14,10 @@ SampleApp::Application.routes.draw do
   match '/signin', to: 'sessions#new', via: 'get' # Esto redirecciona al "sessions/new"
   match '/signout', to: 'sessions#destroy', via: 'delete' # Esto redirecciona al "sessions/destroy"
 
+  # Microposts
+  resources :microposts, only: [:create, :destroy]
+
+
 
   # OLD -----------------------
   # get "static_pages/home"
@@ -22,6 +26,7 @@ SampleApp::Application.routes.draw do
   # get "static_pages/contact"
   # get "users/new"
   # ---------------------------
+  
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

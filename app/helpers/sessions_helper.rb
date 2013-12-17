@@ -40,6 +40,15 @@ module SessionsHelper
   end
 
 
+  def signed_in_user
+    # Si no hay usuario autenticado, guardar la URL en sesión y redireccionar a la pág. de login
+    unless signed_in?
+      store_location
+      redirect_to signin_url, notice: "Please sign in."
+    end
+  end  
+
+
   def sign_out
     self.current_user = nil  # Eq: self.current_user=(nil)
     cookies.delete(:remember_token)
