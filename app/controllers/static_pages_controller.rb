@@ -9,7 +9,7 @@ class StaticPagesController < ApplicationController
 
   def home
     if signed_in?
-    	# En el caso de que hay aun usuario en sesión, hay que crear un objeto @micropost
+    	# En el caso de que hay un usuario en sesión, hay que crear un objeto @micropost
     	# para el usuario, de modo que se puedan crear microposts en el formulario
     	@micropost = current_user.microposts.build
 

@@ -157,7 +157,6 @@ describe User do
 	# --------------------------------------------------------
 	# Test para validar las asociaciones de User con Micropost
 	it { should respond_to(:microposts) }
-	it { should respond_to(:feed) }
 
 	describe "micropost associations" do
 
@@ -190,17 +189,93 @@ describe User do
 			end
 		end
 
+
 		# Test feeds
+		it { should respond_to(:feed) } # Hay un método "feed" en el Modelo del User
+
 		describe "status" do
-			let(:unfollowed_post) { FactoryGirl.create(:micropost, user: FactoryGirl.create(:user)) }
+
+			let(:unfollowed_post) {FactoryGirl.create(:micropost, user: FactoryGirl.create(:user))}
+			let(:followed_user) { FactoryGirl.create(:user) }
+
+			before do
+				@user.follow!(followed_user)
+				# Crea 3 micropost al followed_user
+				3.times { followed_user.microposts.create!(content: "Lorem ipsum") }
+			end
 
 			# El feed contiene los microposts del usuario, pero excluye los de otros usuarios
 			its(:feed) { should include(newer_micropost) }
 			its(:feed) { should include(older_micropost) }
 			its(:feed) { should_not include(unfollowed_post) }
+			its(:feed) do
+				followed_user.microposts.each do |micropost|
+					should include(micropost)
+				end
+			end
 		end		
 
-
 	end	
+
+
+	# --------------------------------------------------------
+	# Test para validar las Relationships del User
+	describe "User and Relationships" do
+
+		it { should respond_to(:relationships) }
+		it { should respond_to(:followed_users) }
+
+		it { should respond_to(:reverse_relationships) }
+		it { should respond_to(:followers) }
+
+		it { should respond_to(:following?) }
+		it { should respond_to(:follow!) }
+		it { should respond_to(:unfollow!) }
+
+		describe "following" do
+
+			let(:other_user) { FactoryGirl.create(:user, name:"luis") }
+			let(:other_user2) { FactoryGirl.create(:user, name:"juan") }
+			let(:other_user3) { FactoryGirl.create(:user, name:"pepe") }
+			before do
+				@user.save
+				# el usuario va a seguir a otros tres
+				@user.follow!(other_user)
+				@user.follow!(other_user2)
+				@user.follow!(other_user3)
+			end
+
+			it { should be_following(other_user) }
+			its(:followed_users) { should include(other_user) }
+
+			describe "and unfollowing" do
+				before { @user.unfollow!(other_user) }
+
+				it { should_not be_following(other_user) }
+				its(:followed_users) { should_not include(other_user) }
+			end	
+
+
+			# --- PRUEBA para mostrar los seguidos por el User (followeds) ---
+			describe "Test print @user followeds" do
+				let(:a) {@user.relationships.to_a}
+				it "prints user's followeds data" do
+					puts "\nSEGUIDOS POR EL USER " + @user.id.to_s + ":"
+					puts "First -> follower_id: " + a[0].follower_id.to_s + ", followed_id: " +  a[0].followed_id.to_s + ", name followed: " +  a[0].followed.name.to_s
+					puts "Second -> follower_id: " + a[1].follower_id.to_s + ", followed_id: " +  a[1].followed_id.to_s + ", name followed: " +  a[1].followed.name.to_s
+					puts "Third -> follower_id: " + a[2].follower_id.to_s + ", followed_id: " +  a[2].followed_id.to_s + ", name followed: " +  a[2].followed.name.to_s
+				end			
+		    end
+		    # --- FIN PRUEBA ---
+
+
+			describe "followed user" do
+				subject { other_user }
+				its(:followers) { should include(@user) }
+			end
+
+		end		
+
+	end
 
 end

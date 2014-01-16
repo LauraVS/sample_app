@@ -1,0 +1,23 @@
+<% @user ||= current_user %>
+<%# ||= it sets @user to the current_user when  @user is nil, 
+    but it does nothing when @user is not nil %>
+
+<div class="stats">
+
+  <a href="<%= following_user_path(@user) %>">
+    <strong id="following" class="stat">
+      <%= @user.followed_users.count %>
+      <%# Equivalente:@user.relationships.count %>
+    </strong>
+    following
+  </a>
+
+  <a href="<%= followers_user_path(@user) %>">
+    <strong id="followers" class="stat">
+      <%= @user.followers.count %>
+      <%# Equivalente: @user.reverse_relationships.count %>
+    </strong>
+    followers
+  </a>
+
+</div>

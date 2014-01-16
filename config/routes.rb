@@ -6,7 +6,12 @@ SampleApp::Application.routes.draw do
   match '/contact', to: 'static_pages#contact', via: 'get'
   
   # Users
-  resources :users
+  resources :users do
+    member do
+      # "member" means that the routes respond to URLs containing the user id
+      get :following, :followers # Añade estas URLs: /users/1/following y /users/1/followers
+    end
+  end  
   match '/signup', to: 'users#new', via: 'get' # Esto redirecciona al "users/new"
 
   # Sessions
@@ -16,6 +21,9 @@ SampleApp::Application.routes.draw do
 
   # Microposts
   resources :microposts, only: [:create, :destroy]
+
+  # Relationships
+  resources :relationships, only: [:create, :destroy]
 
 
 

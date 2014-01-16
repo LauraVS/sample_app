@@ -24,10 +24,10 @@
 	"buffers":
 	[
 		{
-			"file": "app/controllers/microposts_controller.rb",
+			"file": "app/controllers/relationships_controller.rb",
 			"settings":
 			{
-				"buffer_size": 1720,
+				"buffer_size": 873,
 				"line_ending": "Windows"
 			}
 		},
@@ -35,16 +35,24 @@
 			"file": "app/views/static_pages/home.html.erb",
 			"settings":
 			{
-				"buffer_size": 873,
+				"buffer_size": 933,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/views/shared/_feed_item.html.erb",
+			"file": "spec/models/user_spec.rb",
 			"settings":
 			{
-				"buffer_size": 542,
-				"line_ending": "Windows"
+				"buffer_size": 9257,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/user.rb",
+			"settings":
+			{
+				"buffer_size": 2221,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -76,46 +84,63 @@
 	},
 	"file_history":
 	[
-		"/C/desarrollo/ruby/proyectos/sample_app/app/views/microposts/_micropost.html.erb",
-		"/C/desarrollo/ruby/proyectos/sample_app/spec/requests/micropost_pages_spec.rb",
-		"/C/desarrollo/ruby/proyectos/sample_app/spec/models/micropost_spec.rb",
 		"/C/desarrollo/ruby/proyectos/sample_app/app/controllers/users_controller.rb",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/controllers/static_pages_controller.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/spec/factories.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/views/shared/_micropost_form.html.erb",
+		"/C/desarrollo/ruby/proyectos/sample_app/lib/tasks/sample_data.rake",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/views/relationships/destroy.js.erb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/views/relationships/create.js.erb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/views/users/show_follow.html.erb",
+		"/C/desarrollo/ruby/proyectos/sample_app/spec/requests/user_pages_spec.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/spec/controllers/relationships_controller_spec.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/models/relationship.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/controllers/microposts_controller.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/spec/models/user_spec.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/views/users/_unfollow.html.erb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/views/users/_follow.html.erb",
+		"/C/desarrollo/ruby/proyectos/sample_app/spec/requests/micropost_pages_spec.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/tmp/cache/assets/development/sass/59e9baeea22e4063146b0fcc2e3e2956a69bbe3c/_variables.scssc",
 		"/C/desarrollo/ruby/proyectos/sample_app/app/views/users/_user.html.erb",
 		"/C/desarrollo/ruby/proyectos/sample_app/app/views/users/index.html.erb",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/helpers/sessions_helper.rb",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/helpers/users_helper.rb",
-		"/C/desarrollo/ruby/proyectos/sample_app/lib/tasks/sample_data.rake",
+		"/C/desarrollo/ruby/proyectos/sample_app/spec/requests/authentication_pages_spec.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/config/routes.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/spec/requests/static_pages_spec.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/spec/models/relationship_spec.rb",
 		"/C/desarrollo/ruby/proyectos/sample_app/app/views/users/show.html.erb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/views/shared/_user_info.html.erb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/views/shared/_stats.html.erb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/models/user.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/views/layouts/application.html.erb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/views/users/edit.html.erb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/views/static_pages/home.html.erb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/views/static_pages/help.html.erb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/views/layouts/_header.html.erb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/views/users/_follow_form.html.erb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/assets/stylesheets/custom.css.scss",
+		"/C/desarrollo/ruby/proyectos/sample_app/tmp/cache/assets/development/sass/59e9baeea22e4063146b0fcc2e3e2956a69bbe3c/_dropdowns.scssc",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/helpers/sessions_helper.rb",
 		"/C/desarrollo/ruby/proyectos/sample_app/app/views/shared/_feed.html.erb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/models/micropost.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/spec/models/micropost_spec.rb",
 		"/C/desarrollo/ruby/proyectos/sample_app/app/views/shared/_feed_item.html.erb",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/controllers/microposts_controller.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/db/schema.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/db/migrate/20131218161726_create_relationships.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/db/migrate/20131210120426_create_microposts.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/db/migrate/20130924095945_create_users.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/views/microposts/_micropost.html.erb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/controllers/static_pages_controller.rb",
+		"/C/desarrollo/ruby/proyectos/sample_app/app/helpers/users_helper.rb",
 		"/C/desarrollo/ruby/proyectos/sample_app/log/development.log",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/views/shared/_micropost_form.html.erb",
 		"/C/desarrollo/ruby/proyectos/sample_app/log/test.log",
 		"/C/desarrollo/ruby/proyectos/sample_app/app/controllers/application_controller.rb",
 		"/C/desarrollo/ruby/proyectos/sample_app/app/controllers/sessions_controller.rb",
-		"/C/desarrollo/ruby/proyectos/sample_app/spec/requests/static_pages_spec.rb",
-		"/C/desarrollo/ruby/proyectos/sample_app/spec/models/user_spec.rb",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/models/user.rb",
-		"/C/desarrollo/ruby/proyectos/sample_app/spec/factories.rb",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/models/micropost.rb",
-		"/C/desarrollo/ruby/proyectos/sample_app/spec/requests/user_pages_spec.rb",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/views/static_pages/home.html.erb",
-		"/C/desarrollo/ruby/proyectos/sample_app/spec/requests/authentication_pages_spec.rb",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/views/users/edit.html.erb",
 		"/C/desarrollo/ruby/proyectos/sample_app/app/views/users/new.html.erb",
 		"/C/desarrollo/ruby/proyectos/sample_app/app/views/shared/_error_messages.html.erb",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/views/shared/_user_info.html.erb",
-		"/C/desarrollo/ruby/proyectos/sample_app/config/routes.rb",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/assets/stylesheets/custom.css.scss",
 		"/C/Users/Laura/AppData/Roaming/Sublime Text 2/Packages/Default/Default (Windows).sublime-keymap",
 		"/C/Users/Laura/AppData/Roaming/Sublime Text 2/Packages/RubyTest/Default (Windows).sublime-keymap",
 		"/C/Users/Laura/AppData/Roaming/Sublime Text 2/Packages/User/RubyTest.sublime-settings",
 		"/C/Users/Laura/AppData/Roaming/Sublime Text 2/Packages/RubyTest/RubyTest.sublime-settings",
 		"/C/Users/Laura/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap",
-		"/C/desarrollo/ruby/proyectos/sample_app/db/migrate/20130924095945_create_users.rb",
-		"/C/desarrollo/ruby/proyectos/sample_app/db/migrate/20131210120426_create_microposts.rb",
 		"/C/desarrollo/ruby/proyectos/sample_app/db/migrate/20130930102209_add_index_to_users_email.rb",
 		"/C/desarrollo/ruby/proyectos/sample_app/Gemfile",
 		"/C/desarrollo/ruby/proyectos/sample_app/app/helpers/application_helper.rb",
@@ -127,11 +152,8 @@
 		"/C/desarrollo/ruby/proyectos/sample_app/config/environment.rb",
 		"/C/desarrollo/ruby/proyectos/sample_app/log/.keep",
 		"/C/desarrollo/ruby/proyectos/sample_app/log/production.log",
-		"/C/desarrollo/ruby/proyectos/sample_app/db/schema.rb",
 		"/C/desarrollo/ruby/proyectos/sample_app/config/environments/production.rb",
 		"/C/desarrollo/ruby/proyectos/sample_app/config/environments/test.rb",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/views/layouts/application.html.erb",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/views/layouts/_header.html.erb",
 		"/C/desarrollo/ruby/proyectos/sample_app/spec/spec_helper.rb",
 		"/C/desarrollo/ruby/proyectos/sample_app/app/assets/stylesheets/users.css.scss",
 		"/C/desarrollo/ruby/proyectos/sample_app/app/assets/stylesheets/application.css",
@@ -156,7 +178,6 @@
 		"/C/desarrollo/ruby/proyectos/sample_app/Gemfile.lock",
 		"/C/desarrollo/ruby/proyectos/sample_app/config/database.yml",
 		"/C/desarrollo/ruby/proyectos/sample_app/db/development.sqlite3",
-		"/C/desarrollo/ruby/proyectos/sample_app/app/views/static_pages/help.html.erb",
 		"/C/desarrollo/ruby/proyectos/sample_app/db/seeds.rb",
 		"/C/desarrollo/ruby/proyectos/sample_app/config/database_OLD",
 		"/C/desarrollo/ruby/proyectos/sample_app/config.ru",
@@ -183,7 +204,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 90.0,
 		"where_history":
 		[
 			"C:\\desarrollo\\ruby\\proyectos\\sample_app",
@@ -195,6 +216,27 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"micropost",
+			"Micropost",
+			"micropost",
+			"Micropost",
+			"micropost",
+			"Micropost",
+			"micropost",
+			"newer_micropost",
+			"\"micropost associations",
+			"expect(",
+			"end.to change(",
+			"update_attributes",
+			"micropostList",
+			"prueba",
+			"gravatar_for",
+			"row",
+			"sidebar",
+			"||=",
+			"should respond_to",
+			"should respond_to(:",
+			"add_index",
 			"log",
 			"feed",
 			"user",
@@ -301,22 +343,7 @@
 			"password_confirmation",
 			"signup_path",
 			"  \n",
-			"root",
-			"about_path",
-			"eaeaea",
-			"spro",
-			"custom",
-			"render",
-			"custom",
-			"provi",
-			"format",
-			"require",
-			"require ",
-			"spor",
-			"database.yml",
-			"sqlite3 ",
-			"Contact",
-			"controll"
+			"root"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -334,23 +361,23 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/controllers/microposts_controller.rb",
+					"file": "app/controllers/relationships_controller.rb",
 					"settings":
 					{
-						"buffer_size": 1720,
+						"buffer_size": 873,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1616,
-								1616
+								271,
+								271
 							]
 						],
 						"settings":
@@ -464,7 +491,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 405.0,
+						"translation.y": 76.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -474,146 +501,42 @@
 					"file": "app/views/static_pages/home.html.erb",
 					"settings":
 					{
-						"buffer_size": 873,
+						"buffer_size": 933,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								749,
-								749
+								294,
+								308
 							]
 						],
 						"settings":
 						{
-							"codeintel": true,
-							"codeintel_config":
-							{
-								"JavaScript":
-								{
-									"codeintel_max_recursive_dir_depth": 2,
-									"codeintel_scan_files_in_project": false,
-									"javascriptExtraPaths":
-									[
-									]
-								},
-								"PHP":
-								{
-									"codeintel_max_recursive_dir_depth": 5,
-									"codeintel_scan_files_in_project": false,
-									"phpExtraPaths":
-									[
-									]
-								},
-								"Python":
-								{
-									"env":
-									{
-									}
-								}
-							},
-							"codeintel_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_live": true,
-							"codeintel_live_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_max_recursive_dir_depth": 10,
-							"codeintel_scan_exclude_dir":
-							{
-								"JavaScript":
-								[
-									"/build/",
-									"/min/"
-								]
-							},
-							"codeintel_scan_files_in_project": true,
-							"codeintel_selected_catalogs":
-							[
-								"PyWin32",
-								"jQuery",
-								"Rails"
-							],
-							"codeintel_snippets": true,
-							"codeintel_syntax_map":
-							{
-								"Python Django": "Python"
-							},
-							"codeintel_tooltips": "popup",
-							"sublime_auto_complete": true,
 							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 180.0,
+						"translation.y": 45.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "app/views/shared/_feed_item.html.erb",
+					"file": "spec/models/user_spec.rb",
 					"settings":
 					{
-						"buffer_size": 542,
+						"buffer_size": 9257,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								542,
-								542
+								6915,
+								6915
 							]
 						],
 						"settings":
@@ -722,10 +645,142 @@
 							},
 							"codeintel_tooltips": "popup",
 							"sublime_auto_complete": true,
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 16.0,
+						"translation.y": 2858.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/models/user.rb",
+					"settings":
+					{
+						"buffer_size": 2221,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1415,
+								1415
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 360.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -766,7 +821,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 143.0
+		"height": 133.0
 	},
 	"replace":
 	{
@@ -779,8 +834,120 @@
 		"selected_items":
 		[
 			[
+				"user",
+				"app/models/user.rb"
+			],
+			[
+				"fact",
+				"spec/factories.rb"
+			],
+			[
+				"user_s",
+				"spec/models/user_spec.rb"
+			],
+			[
+				"micropost_form",
+				"app/views/shared/_micropost_form.html.erb"
+			],
+			[
 				"home",
 				"app/views/static_pages/home.html.erb"
+			],
+			[
+				"rake",
+				"lib/tasks/sample_data.rake"
+			],
+			[
+				"_unf",
+				"app/views/users/_unfollow.html.erb"
+			],
+			[
+				"v",
+				"tmp/cache/assets/development/sass/59e9baeea22e4063146b0fcc2e3e2956a69bbe3c/_variables.scssc"
+			],
+			[
+				"_foll",
+				"app/views/users/_follow.html.erb"
+			],
+			[
+				"_use",
+				"app/views/users/_user.html.erb"
+			],
+			[
+				"inde",
+				"app/views/users/index.html.erb"
+			],
+			[
+				"rour",
+				"config/routes.rb"
+			],
+			[
+				"route",
+				"config/routes.rb"
+			],
+			[
+				"user_pages_spec.rb",
+				"spec/requests/user_pages_spec.rb"
+			],
+			[
+				"rela",
+				"app/models/relationship.rb"
+			],
+			[
+				"authentication_pages_spec.rb",
+				"spec/requests/authentication_pages_spec.rb"
+			],
+			[
+				"controller",
+				"app/controllers/users_controller.rb"
+			],
+			[
+				"row",
+				"tmp/cache/assets/development/sass/59e9baeea22e4063146b0fcc2e3e2956a69bbe3c/_dropdowns.scssc"
+			],
+			[
+				".css",
+				"app/assets/stylesheets/custom.css.scss"
+			],
+			[
+				"rou",
+				"config/routes.rb"
+			],
+			[
+				".rake",
+				"lib/tasks/sample_data.rake"
+			],
+			[
+				"relat",
+				"spec/models/relationship_spec.rb"
+			],
+			[
+				"micropost",
+				"app/models/micropost.rb"
+			],
+			[
+				"sch",
+				"db/schema.rb"
+			],
+			[
+				"schema",
+				"db/schema.rb"
+			],
+			[
+				"sche",
+				"db/schema.rb"
+			],
+			[
+				"create_re",
+				"db/migrate/20131218161726_create_relationships.rb"
+			],
+			[
+				"user.",
+				"app/models/user.rb"
+			],
+			[
+				"migra",
+				"db/migrate/20131210120426_create_microposts.rb"
 			],
 			[
 				"mic",
@@ -799,10 +966,6 @@
 				"app/views/microposts/_micropost.html.erb"
 			],
 			[
-				"rake",
-				"lib/tasks/sample_data.rake"
-			],
-			[
 				"microposts",
 				"app/views/microposts/_micropost.html.erb"
 			],
@@ -815,20 +978,8 @@
 				"app/views/shared/_feed.html.erb"
 			],
 			[
-				"micropost_form",
-				"app/views/shared/_micropost_form.html.erb"
-			],
-			[
 				"log",
 				"log/test.log"
-			],
-			[
-				"user",
-				"app/views/users/_user.html.erb"
-			],
-			[
-				".rake",
-				"lib/tasks/sample_data.rake"
 			],
 			[
 				"user.rb",
@@ -847,10 +998,6 @@
 				"app/views/static_pages/home.html.erb"
 			],
 			[
-				"route",
-				"config/routes.rb"
-			],
-			[
 				"",
 				"spec/requests/authentication_pages_spec.rb"
 			],
@@ -861,10 +1008,6 @@
 			[
 				"rspec",
 				"spec/requests/authentication_pages_spec.rb"
-			],
-			[
-				"rou",
-				"config/routes.rb"
 			],
 			[
 				"custom.css",
@@ -887,10 +1030,6 @@
 				"app/models/micropost.rb"
 			],
 			[
-				"fact",
-				"spec/factories.rb"
-			],
-			[
 				"micropo",
 				"app/models/micropost.rb"
 			],
@@ -905,10 +1044,6 @@
 			[
 				"userht",
 				"app/views/users/index.html.erb"
-			],
-			[
-				"_use",
-				"app/views/users/_user.html.erb"
 			],
 			[
 				"facto",

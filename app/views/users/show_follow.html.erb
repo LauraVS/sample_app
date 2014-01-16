@@ -1,0 +1,42 @@
+<%# view used to render both following and followers %>
+
+<% provide(:title, @title) %>
+
+<div class="row">
+
+  <%# Columna 1 %>
+  <aside class="span4">
+
+    <section>
+      <%= gravatar_for(@user) %>
+      <h1><%= @user.name %></h1>
+      <span><%= link_to("view my profile", @user) %></span>
+      <span><b>Microposts:</b> <%= @user.microposts.count %></span>
+    </section>
+
+    <section>
+      <%= render 'shared/stats' %>
+      <% if @usersList.any? %>
+        <div class="user_avatars">
+          <% @usersList.each do |user| %>
+            <%= link_to(gravatar_for(user, size: 30), user) %>
+          <% end %>
+        </div>
+      <% end %>
+    </section>
+  </aside>
+
+ <%# Columna  %>
+  <div class="span8">
+    <h3><%= @title %></h3>
+    <% if @usersList.any? %>
+      <ul class="users">
+        <%= render @usersList %>
+         <%# Rails deduce que @usersList es una lista de objetos User.
+              Itera a través de los users automáticamente y los renderiza al partial _user.html.erb  %>
+      </ul>
+      <%= will_paginate @usersList %>
+    <% end %>
+  </div>
+
+</div>

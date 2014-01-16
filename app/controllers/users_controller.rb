@@ -6,11 +6,11 @@ class UsersController < ApplicationController
   # -------------------------------  
 
   # Methods to be called before the given actions (are invoked using before_action):
-  #    - signed_in_user--> method to require users to be signed in (for "edit", "update", "index")
+  #    - signed_in_user--> method to require users to be signed in (for "edit", "update", "index"...)
   #    - correct_user--> A user should not have access to another user's edit or update actions
   #    - admin_user--> Restrict the destroy action to admins
 
-  before_action :signed_in_user, only: [:index, :edit, :update, :destroy]
+  before_action :signed_in_user, only: [:index, :edit, :update, :destroy, :following, :followers]
   before_action :correct_user,   only: [:edit, :update]
   before_action :admin_user,     only: :destroy
 
@@ -24,8 +24,6 @@ class UsersController < ApplicationController
   # ----- ACTION METHODS ----------
   # -------------------------------
 
-  
-
 
   # Page to list all the users
   def index
@@ -33,17 +31,20 @@ class UsersController < ApplicationController
   end
 
 
+  # -------------------------------
   # Page to show a user
   def show
     @user = User.find(params[:id])
     @micropostsList = @user.microposts.paginate(page: params[:page])
   end
 
+
   # -------------------------------
   # Page to make a new user (signup)
   def new
   	@user = User.new
   end
+
 
   # -------------------------------
   # Create a new user
@@ -93,6 +94,26 @@ class UsersController < ApplicationController
     redirect_to users_url    
   end
 
+
+
+  # -------------------------------
+  # Page to show the users followed by the current user
+  def following
+    @title = "Following"
+    @user = User.find(params[:id])
+    @usersList = @user.followed_users.paginate(page: params[:page])
+    render 'show_follow'
+  end
+
+
+  # -------------------------------
+  # Page to show the users that are following to the current user
+  def followers
+    @title = "Followers"
+    @user = User.find(params[:id])
+    @usersList = @user.followers.paginate(page: params[:page])
+    render 'show_follow'
+  end
 
 
   # -------------------------------

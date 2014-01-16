@@ -89,6 +89,37 @@ describe "Authentication" do
 			end
 
 
+			# Las páginas de Following y Followers requieren que haya usuario validado
+			describe "Following and Followers in the Users controller" do
+	
+				describe "visiting the following page" do
+					before { visit following_user_path(user) }
+					it { should have_title('Sign in') }
+				end
+				describe "visiting the followers page" do
+					before { visit followers_user_path(user) }
+					it { should have_title('Sign in') }
+				end
+			end			
+
+
+			# Las acciones "create" y "delete" en relationships requieren usuario autenticado
+			describe "in the Relationships controller" do
+
+				describe "submitting to the create action" do
+					before { post relationships_path }
+					specify { expect(response).to redirect_to(signin_path) }
+					# Verify that the post (create action) responds by redirecting to the signin page
+				end
+
+				describe "submitting to the destroy action" do
+					before { delete relationship_path(1) }
+					specify { expect(response).to redirect_to(signin_path) }
+					# Verify that the delete (destroy action) responds by redirecting to the signin page
+				end
+			end
+
+
 			# Si no estamos validados e intentamos acceder a la página de edición, nos
 			# redirecciona a la página de Sig in. Si ahí nos validamos, lo lógico es
 			# que después se muestre la página de edición
